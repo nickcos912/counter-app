@@ -167,13 +167,14 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
   }
 
   makeItRain() {
-    import("@haxtheweb/multiple-choice/lib/confetti-container.js").then(() => {
+    import("@haxtheweb/multiple-choice/lib/confetti-container.js")
+    .then(() => {
       setTimeout(() => {
         const confetti = this.shadowRoot.querySelector("#confetti");
         if (confetti) {
           confetti.setAttribute("popped", "");
         }
-      }, 0);
+      }, 100);
     });
   }
 
