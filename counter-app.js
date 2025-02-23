@@ -20,7 +20,9 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.count = 0;
+    this.counter = 0;
+    this.min = 0;
+    this.max = 100;
     this.title = "";
     this.t = this.t || {};
     this.t = {
