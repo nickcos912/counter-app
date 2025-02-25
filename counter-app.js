@@ -111,7 +111,6 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     `];
   }
 
-  // Lit render the HTML
   render() {
     const counterClass = this.getCounterClass();
     return html`
@@ -184,23 +183,3 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
 }
 
 globalThis.customElements.define(CounterApp.tag, CounterApp);
-  /*increase() {
-    this.count++;
-  }
-  decrease() {
-    this.count--;
-  }
-  reset() {
-    this.count = 0;
-  }
-
-  /**
-   * haxProperties integration via file reference
-   * 
-  static get haxProperties() {
-    return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
-      .href;
-  }
-}
-
-globalThis.customElements.define(CounterApp.tag, CounterApp);*/
